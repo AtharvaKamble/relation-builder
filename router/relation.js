@@ -19,7 +19,7 @@ const { Graph,
 // For production
 const pool = new Pool({
     user: 'postgres',
-    host: 'localhost',
+    host: process.env.HOST,
     database: process.env.DATABASE_URL,
     password: 'password',
     port: 5432
