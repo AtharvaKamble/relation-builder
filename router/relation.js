@@ -9,13 +9,22 @@ const { Graph,
     populateEdges } = require('./../utils/helpers')
 
 
+// const pool = new Pool({
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'a_kamble',
+//     password: 'password',
+//     port: 5432
+// })
+// For production
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    database: 'a_kamble',
+    database: process.env.DATABASE_URL,
     password: 'password',
     port: 5432
 })
+
 
 
 // set relation edges
