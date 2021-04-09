@@ -7,7 +7,8 @@ const { Graph,
     getRelationsDataNames,
     populateVertices,
     populateEdges } = require('./../utils/helpers')
-const pgvariables = require('../pgvariables')
+// const pgvariables = require('../pgvariables')
+const pgstring = require('../pgstring')
 
 // const pool = new Pool({
 //     user: 'postgres',
@@ -17,14 +18,20 @@ const pgvariables = require('../pgvariables')
 //     port: 5432
 // })
 // For production
+// const pool = new Pool({
+//     user: pgvariables.user,
+//     host: pgvariables.host,
+//     database: pgvariables.database,
+//     password: pgvariables.password,
+//     port: pgvariables.port
+// })
+
+// For real production
 const pool = new Pool({
-    user: pgvariables.user,
-    host: pgvariables.host,
-    database: pgvariables.database,
-    password: pgvariables.password,
-    port: pgvariables.port
+    connectionString: pgstring.connect
 })
 
+// console.log(pgstring.connect)
 
 // console.log(process.env.DEV_HOST)
 // set relation edges
