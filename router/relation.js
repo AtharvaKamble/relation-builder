@@ -7,7 +7,7 @@ const { Graph,
     getRelationsDataNames,
     populateVertices,
     populateEdges } = require('./../utils/helpers')
-
+const pgvariables = require('../pgvariables')
 
 // const pool = new Pool({
 //     user: 'postgres',
@@ -18,15 +18,15 @@ const { Graph,
 // })
 // For production
 const pool = new Pool({
-    user: 'postgres',
-    host: process.env.HOST,
-    database: process.env.DATABASE_URL,
-    password: 'password',
-    port: 5432
+    user: pgvariables.user,
+    host: pgvariables.host,
+    database: pgvariables.database,
+    password: pgvariables.password,
+    port: pgvariables.port
 })
 
 
-
+// console.log(process.env.DEV_HOST)
 // set relation edges
 router.post('/add/relation', async (req, res) => {
 
