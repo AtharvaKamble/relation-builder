@@ -7,8 +7,8 @@ const { Graph,
     getRelationsDataNames,
     populateVertices,
     populateEdges } = require('./../utils/helpers')
-// const pgvariables = require('../pgvariables')
-const pgstring = require('../pgstring')
+require('dotenv').config()
+// const pgstring = require('../pgstring')
 
 // const pool = new Pool({
 //     user: 'postgres',
@@ -28,7 +28,7 @@ const pgstring = require('../pgstring')
 
 // For real production
 const pool = new Pool({
-    connectionString: pgstring.connect
+    connectionString: process.env.PGCONNECT
 })
 
 // console.log(pgstring.connect)
