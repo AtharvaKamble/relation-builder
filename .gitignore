@@ -1,4 +1,2 @@
 node_modules
 .env
-pgvariables.js
-pgstring.js
