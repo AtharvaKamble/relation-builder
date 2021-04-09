@@ -28,7 +28,7 @@ require('dotenv').config()
 
 // For real production
 const pool = new Pool({
-    connectionString: process.env.PGCONNECT
+    connectionString: process.env.DATABASE_URL
 })
 
 // console.log(pgstring.connect)
