@@ -105,8 +105,8 @@ function MainArea(props) {
     }, [addArr])
 
   return (
-    <div>
-        <div className='main-area' hidden={props.isAdd}>
+    <div className="w-full">
+        <div className='m-20 p-20 shadow-lg rounded-lg' hidden={props.isAdd}>
             <div className="people-display">
             	{/*len ? <AddTable userData={addArr}/> : null*/}
                 <AddTable userData={addArr}/>
@@ -118,13 +118,13 @@ function MainArea(props) {
             </div>
             <Button className="submit-button" onClick={addAllPeoplePOSTRequest} variant="outlined">ADD</Button>
         </div>
-        <div className="relation-area fade-in" hidden={props.isCheck}>
+        <div className="m-10 p-40 shadow-lg rounded-lg fade-in" hidden={props.isCheck}>
 
             <div className="input-container">
                 <input className="person-input" value={personRA} autoFocus onChange={(e) => setPersonRA(e.target.value)} placeholder="Person"/>
                 <input className="relative-input" value={relativeRA} onChange={(e) => setRelativeRA(e.target.value)} placeholder="Relative" />
             </div>
-            <Button className="submit-button" onClick={addPeoplePOSTRequest} variant="outlined">ADD</Button>
+            <Button className="submit-button" onClick={addPeoplePOSTRequest} variant="outlined">Check</Button>
             <CheckTable userData={arr}/>
         </div>
     </div>

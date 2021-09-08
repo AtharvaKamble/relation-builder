@@ -68,7 +68,7 @@ function SideBar() {
 
     // console.log(isCheckRelationDiv)  // DEBUG
   return (
-      <div className="entire-container">
+      <div className="flex w-full h-screen">
         <div className="sidebar">
             <label>RELATIONS BUILDER</label>
             <div className={classToMain} onClick={addClassToMain}>Add People</div>
