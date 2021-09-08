@@ -1,12 +1,14 @@
 import { React, useState, useEffect } from 'react';
 import CheckTable from './CheckTable.js'
 import AddTable from './AddTable.js'
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import '../App.css';
 import '../Animation.css'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import {Button, Typography} from 'antd';
+import 'antd/dist/antd.css';
 
-
+const {Text} = Typography;
 
 function MainArea(props) {
     const [ arr, setArr ] = useState([])
@@ -116,15 +118,15 @@ function MainArea(props) {
                 <input className="relation-input" value={relation} onChange={(e) => setRelation(e.target.value.trim())} placeholder="Relation"/>
                 <input className="relative-input" value={relative} onChange={(e) => setRelative(e.target.value.trim())} placeholder="Relative" />
             </div>
-            <Button className="submit-button" onClick={addAllPeoplePOSTRequest} variant="outlined">ADD</Button>
+            <Button onClick={addAllPeoplePOSTRequest} type="primary" size="large">Add</Button>
         </div>
         <div className="m-10 p-40 shadow-lg rounded-lg fade-in" hidden={props.isCheck}>
-
+            <p className="text-3xl text-gray-800 font-extralight">Check how two people are connected</p>
             <div className="input-container">
                 <input className="person-input" value={personRA} autoFocus onChange={(e) => setPersonRA(e.target.value)} placeholder="Person"/>
                 <input className="relative-input" value={relativeRA} onChange={(e) => setRelativeRA(e.target.value)} placeholder="Relative" />
             </div>
-            <Button className="submit-button" onClick={addPeoplePOSTRequest} variant="outlined">Check</Button>
+            <Button className="" onClick={addPeoplePOSTRequest} type="primary" size="large">Check</Button>
             <CheckTable userData={arr}/>
         </div>
     </div>

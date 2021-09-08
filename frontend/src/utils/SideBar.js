@@ -3,6 +3,7 @@ import MainArea from './MainArea.js'
 import Dialogue from './Dialogue.js'    // Implement later
 import '../App.css';
 import '../Animation.css'
+import {Row, Col} from 'antd'
 
 const LEAVE_TEMP = 'leave'
 
@@ -69,9 +70,9 @@ function SideBar() {
     // console.log(isCheckRelationDiv)  // DEBUG
   return (
       <div className="flex w-full h-screen">
-        <div className="sidebar">
-            <label>RELATIONS BUILDER</label>
-            <div className={classToMain} onClick={addClassToMain}>Add People</div>
+        <div className="sidebar w-96">
+            <label className="">RELATIONS BUILDER</label>
+            <div className={`w-full ${classToMain}`} onClick={addClassToMain}>Add People</div>
             <div className={classToRelation} onClick={addClassToRelation}>Check Relation</div>
             <div className={classLeaveDiv} onClick={leave}>Clear DATA</div>
         </div>

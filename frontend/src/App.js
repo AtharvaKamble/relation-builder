@@ -1,5 +1,6 @@
 import { React } from 'react';
 import './App.css';
+import 'antd/dist/antd.css';
 import MainArea from './utils/MainArea.js'
 import SideBar from './utils/SideBar.js'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'

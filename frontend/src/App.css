@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+
+
 .App {
   text-align: center;
   display: flex;
@@ -12,18 +14,11 @@
 
 /* SideBar.js */
 .sidebar {
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    /* max-width: %; */
     /* background-color: #e2d6ff; */
     background-color: #2e1d1d;
     color: #FFFFFF;
     /* border: 1px solid #F1F4FFFF; */
-    width: 250px;
     /* max-width: 60%; */
-    padding: 50px;
-    padding-left: 0;
 
 }
 
