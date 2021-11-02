@@ -6,6 +6,9 @@ The database contains two tables namely `peoples` to store raw people data with 
 After extracting data from relations table, the server uses graph theory to find all possible paths between people and degrees of connection.
 
 
+* This is currently hosted at https://relationbuilder.herokuapp.com/
+
+<!--
 ## Question: If this app were to receive 1M requests per day, how would you structure it?
 
 #### IC2 instance
@@ -18,3 +21,4 @@ Using the C instance (for applications which are CPU intensive) is also an optio
 32GB memory.This instance with a reserved Linux server costs around ($3.36 * 30 = $100 / month)(Rs. 250.6 * 30 = Rs. 7457)
 
 Reference: [EC2](http://ec2instances.info/)
+-->
