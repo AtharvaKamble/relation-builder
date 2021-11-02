@@ -32,14 +32,14 @@ function createData(person, relation, relative) {
 
 var rows = [];
 
-function addToRows (a) {
-    rows = []
-    if (a) {
-        for (var i = 0; i < a.length; i++) {
-            rows.push(createData(a[i].person, a[i].relation, a[i].relative))
-        }
+function addToRows(a) {
+  rows = [];
+  if (a) {
+    for (var i = 0; i < a.length; i++) {
+      rows.push(createData(a[i].person, a[i].relation, a[i].relative));
     }
-    // console.log('A-> ', a)  // DEBUG
+  }
+  // console.log('A-> ', a)  // DEBUG
 }
 
 const useStyles = makeStyles({
@@ -52,9 +52,8 @@ function CustomizedTables(props) {
   const classes = useStyles();
 
   useEffect(() => {
-      addToRows(props.userData.relationsDataNames)
-  }, [props.userData])
-
+    addToRows(props.userData.relationsDataNames);
+  }, [props.userData]);
 
   // const rows = props
 
@@ -64,15 +63,23 @@ function CustomizedTables(props) {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="center">PERSON</StyledTableCell>
-            <StyledTableCell align="center">RELATION</StyledTableCell>
-            <StyledTableCell align="center">RELATIVE</StyledTableCell>
+            <StyledTableCell align="center" className="font-table-title">
+              PERSON
+            </StyledTableCell>
+            <StyledTableCell align="center" className="font-table-title">
+              RELATION
+            </StyledTableCell>
+            <StyledTableCell align="center" className="font-table-title">
+              RELATIVE
+            </StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <StyledTableRow key={[row.person, row.relative]}>
-              <StyledTableCell align="center" component="th" scope="row">{row.person}</StyledTableCell>
+              <StyledTableCell align="center" component="th" scope="row">
+                {row.person}
+              </StyledTableCell>
               <StyledTableCell align="center">{row.relation}</StyledTableCell>
               <StyledTableCell align="center">{row.relative}</StyledTableCell>
             </StyledTableRow>
