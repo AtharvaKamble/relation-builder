@@ -8,6 +8,8 @@ After extracting data from relations table, the server uses graph theory to find
 
 * This is currently hosted at https://relationbuilder.herokuapp.com/
 
+* PS: Since, heroku got rid of their free tier, this link would not work at the moment until I host it elsewhere.
+
 <!--
 ## Question: If this app were to receive 1M requests per day, how would you structure it?
 
